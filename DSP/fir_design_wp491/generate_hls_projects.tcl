@@ -56,8 +56,9 @@ foreach implementation [list fx fp] {
     set_part {xcvu9p-flgb2104-2-i-es2} ; puts "using a vu9p-2 part - change if necessary"
 
     create_clock -period 2.5 -name default
-    csim_design -compiler gcc
+    #csim_design -compiler gcc
     csynth_design
 #    cosim_design
 #    export_design -evaluate verilog
+    export_design -flow impl -rtl verilog -format ip_catalog
 }

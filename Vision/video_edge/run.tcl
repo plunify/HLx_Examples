@@ -15,10 +15,11 @@ open_solution "sol1"
 set_part {xc7z020clg484-1}
 create_clock -period 6 -name default
 #source "directives.tcl"
-csim_design -clean
+#csim_design -clean
 csynth_design
 #cosim_design -trace_level all -tool modelsim
 #cosim_design -trace_level port -tool modelsim
 #export_design -format ip_catalog -vendor "NCR" -version "1.011" -display_name "PreprocessFrame"
+export_design -flow impl -rtl verilog -format ip_catalog -vendor "NCR" -version "1.011" -display_name "PreprocessFrame"
 exit
 

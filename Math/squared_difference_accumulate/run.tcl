@@ -59,7 +59,7 @@ create_clock -period $Clock
 #################
 # C SIMULATION
 #################
-csim_design
+#csim_design
 
 #############
 # SYNTHESIS #
@@ -69,12 +69,13 @@ csynth_design
 #################
 # CO-SIMULATION #
 #################
-cosim_design -rtl verilog -trace_level all
+#cosim_design -rtl verilog -trace_level all
 
 ##################
 # IMPLEMENTATION #
 ##################
-export_design -evaluate verilog -format ipxact
+#export_design -evaluate verilog -format ipxact
+export_design -flow impl -rtl verilog -format ip_catalog
 
 
 exit

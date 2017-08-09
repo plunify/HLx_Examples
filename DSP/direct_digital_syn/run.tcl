@@ -11,12 +11,12 @@ open_solution -reset sol1
 set_part  {xc7k160tfbg484-1}
 create_clock -period "400MHz"
 
-csim_design
+#csim_design
 csynth_design
 #cosim_design -rtl verilog -tool modelsim -trace_level port
 }
 
-#------------------------------- first solution
+#------------------------------- second solution
 # 2-3 min for csim, csynth
 # few min for cosim
 # 1 min for export
@@ -26,10 +26,11 @@ set_part  {xc7k160tfbg484-1}
 create_clock -period "400MHz"
 source directives_axi.tcl
 
-csim_design
+#csim_design
 csynth_design
 #cosim_design -rtl verilog -tool modelsim -trace_level port
 #export_design -format sysgen
+export_design -flow impl -rtl verilog -format ip_catalog
 
 exit
 

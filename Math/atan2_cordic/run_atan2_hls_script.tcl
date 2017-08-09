@@ -20,10 +20,11 @@ add_files -tb test_data
 open_solution "solution1_double"
 set_part {xc7z045ffg900-2}
 create_clock -period 2.5 -name default
-csim_design -clean
+#csim_design -clean
 csynth_design
 #cosim_design
 #export_design -evaluate verilog -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 
 close_project
 
@@ -39,10 +40,11 @@ add_files -tb test_data
 open_solution "solution1_single"
 set_part {xc7z045ffg900-2}
 create_clock -period 2.5 -name default
-csim_design -clean
+#csim_design -clean
 csynth_design
 #cosim_design
 #export_design -evaluate verilog -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 
 close_project
 
@@ -57,10 +59,11 @@ add_files -tb test_data
 open_solution "solution1_cordic"
 set_part {xc7z045ffg900-2}
 create_clock -period 2.5 -name default
-csim_design -clean
+#csim_design -clean
 csynth_design
 #cosim_design
 #export_design -evaluate verilog -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 
 close_project
 
@@ -76,8 +79,9 @@ add_files -tb test_data
 open_solution "solution2_cordic_bitaccurate"
 set_part {xc7z045ffg900-2}
 create_clock -period 2.5 -name default
-csim_design -clean
+#csim_design -clean
 csynth_design
-cosim_design
-export_design -evaluate verilog -format ip_catalog
+#cosim_design
+#export_design -evaluate verilog -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 close_project

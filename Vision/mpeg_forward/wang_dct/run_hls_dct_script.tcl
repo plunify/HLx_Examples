@@ -18,10 +18,11 @@ add_files -tb fdctref.cpp
 open_solution "solution_wang"
 set_part {xc7k325tffg900-2}
 create_clock -period 4 -name default
-csim_design -clean
+#csim_design -clean
 csynth_design
-cosim_design
-export_design -evaluate verilog -format ip_catalog
+#cosim_design
+#export_design -evaluate verilog -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 close_project
 
 
@@ -35,10 +36,11 @@ open_solution "solution_tutorial"
 set_part {xc7k325tffg900-2}
 create_clock -period 4 -name default
 #source "./hls_wangdct_prj/solution_tutorial/directives.tcl"
-csim_design -clean
+#csim_design -clean
 csynth_design
-cosim_design
-export_design -evaluate verilog -format ip_catalog
+#cosim_design
+#export_design -evaluate verilog -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 close_project
 
-
+exit

@@ -28,10 +28,11 @@ set_directive_pipeline "func1_process_magnitude/L1"
 set_directive_pipeline "func2_process_magnitude/L2"
 set_directive_pipeline "func3_process_magnitude/L3"
 set_directive_pipeline "func4_process_magnitude/L4"
-csim_design -ldflags {{-Wl,--stack=268435456}} -clean
+#csim_design -ldflags {{-Wl,--stack=268435456}} -clean
 csynth_design
 #cosim_design -ldflags {{-Wl,--stack=268435456}} -rtl systemc
 #export_design -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 close_project
 
 #// to enable TOTALLY floating point sqrt reference function for SOLUTION 1
@@ -54,10 +55,11 @@ set_directive_pipeline "func1_process_magnitude/L1"
 set_directive_pipeline "func2_process_magnitude/L2"
 set_directive_pipeline "func3_process_magnitude/L3"
 set_directive_pipeline "func4_process_magnitude/L4"
-csim_design -ldflags {{-Wl,--stack=268435456}} -clean
+#csim_design -ldflags {{-Wl,--stack=268435456}} -clean
 csynth_design
 #cosim_design -ldflags {{-Wl,--stack=268435456}} -rtl systemc
 #export_design -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 close_project
 
 
@@ -81,10 +83,11 @@ set_directive_pipeline "func1_process_magnitude/L1"
 set_directive_pipeline "func2_process_magnitude/L2"
 set_directive_pipeline "func3_process_magnitude/L3"
 set_directive_pipeline "func4_process_magnitude/L4"
-csim_design -ldflags {{-Wl,--stack=268435456}} -clean
+#csim_design -ldflags {{-Wl,--stack=268435456}} -clean
 csynth_design
 #cosim_design -ldflags {{-Wl,--stack=268435456}} -rtl systemc
 #export_design -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 close_project
 
 #//to enable full version of Cordic sqrt function for SOLUTIONS 3 and 4
@@ -107,10 +110,11 @@ set_directive_pipeline "func1_process_magnitude/L1"
 set_directive_pipeline "func2_process_magnitude/L2"
 set_directive_pipeline "func3_process_magnitude/L3"
 set_directive_pipeline "func4_process_magnitude/L4"
-csim_design -ldflags {{-Wl,--stack=268435456}} -clean
+#csim_design -ldflags {{-Wl,--stack=268435456}} -clean
 csynth_design
 #cosim_design -ldflags {{-Wl,--stack=268435456}} -rtl systemc
 #export_design -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 close_project
 
 open_project hls_isqrt_prj
@@ -132,8 +136,9 @@ set_directive_pipeline "func1_process_magnitude/L1"
 set_directive_pipeline "func2_process_magnitude/L2"
 set_directive_pipeline "func3_process_magnitude/L3"
 set_directive_pipeline "func4_process_magnitude/L4"
-csim_design -ldflags {{-Wl,--stack=268435456}} -clean
+#csim_design -ldflags {{-Wl,--stack=268435456}} -clean
 csynth_design
 #cosim_design -ldflags {{-Wl,--stack=268435456}} -rtl systemc
 #export_design -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 close_project

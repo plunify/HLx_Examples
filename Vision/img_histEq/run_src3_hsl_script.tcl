@@ -22,13 +22,14 @@ open_solution "solution1"
 set_part {xc7z020clg484-1}
 create_clock -period 160MHz -name default
 
-csim_design -ldflags {-Wl,--stack=268435456} -clean 
+#csim_design -ldflags {-Wl,--stack=268435456} -clean 
 # ONLY FOR WINDOWS
 #csim_design -clean #ONLY FOR LINUX
 csynth_design
 #cosim_design -ldflags {-Wl,--stack=268435456} # ONLY FOR WINDOWS
 #cosim_design 
 #export_design -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 
 
 ################## SOLUTION2: DATAFLOW ####################
@@ -43,6 +44,7 @@ csynth_design
 #cosim_design -ldflags {-Wl,--stack=268435456} # ONLY FOR WINDOWS
 #cosim_design 
 #export_design -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 
 ################## SOLUTION3: DATAFLOW + CONFIG_DATAFLOW ####################
 open_solution "solution3"
@@ -56,6 +58,7 @@ csynth_design
 #cosim_design -ldflags {-Wl,--stack=268435456} # ONLY FOR WINDOWS
 #cosim_design 
 #export_design -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 
 ################## SOLUTION4: as Solution3 + PIPELINE  all the innermost loops ####################
 open_solution "solution4"
@@ -73,6 +76,7 @@ csynth_design
 #cosim_design -ldflags {-Wl,--stack=268435456} # ONLY FOR WINDOWS
 #cosim_design 
 #export_design -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 
 ################## SOLUTION5: as Solution4 + DEPENDENCE FALSE  ####################
 open_solution "solution5"
@@ -92,4 +96,6 @@ csynth_design
 #cosim_design -ldflags {-Wl,--stack=268435456} # ONLY FOR WINDOWS
 #cosim_design 
 #export_design -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 
+exit

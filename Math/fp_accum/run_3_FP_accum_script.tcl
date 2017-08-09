@@ -19,8 +19,9 @@ add_files -tb fp_accum.cpp
 open_solution "solution1"
 set_part {xc7k325tffg900-2}
 create_clock -period 2.5 -name default
-csim_design -clean
+#csim_design -clean
 csynth_design
+export_design -flow impl -rtl verilog -format ip_catalog
 
 # solution2: as solution1 plus PIPELINE the inner loop
 open_solution "solution2"
@@ -28,6 +29,7 @@ set_part {xc7k325tffg900-2}
 create_clock -period 2.5 -name default
 set_directive_pipeline "hls_fp_accumulator/L1"
 csynth_design
+export_design -flow impl -rtl verilog -format ip_catalog
 
 close_project
 
@@ -42,8 +44,9 @@ add_files -tb fp_accum.cpp
 open_solution "solution3"
 set_part {xc7k325tffg900-2}
 create_clock -period 2.5 -name default
-csim_design -clean
+#csim_design -clean
 csynth_design
+export_design -flow impl -rtl verilog -format ip_catalog
 
 # solution4: as solution3 plus PIPELINE at top level 
 open_solution "solution4"
@@ -51,7 +54,10 @@ set_part {xc7k325tffg900-2}
 create_clock -period 2.5 -name default
 set_directive_pipeline "hls_fp_accumulator"
 csynth_design
-cosim_design
-export_design -evaluate verilog -format ip_catalog
+#cosim_design
+#export_design -evaluate verilog -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 
 close_project
+
+exit

@@ -7,7 +7,7 @@ open_solution "sol1"
 set_part {xc7a100tcsg324-3}
 create_clock -period 10 -name default
 set_clock_uncertainty 0
-csim_design
+#csim_design
 #source "./VHLS_proj/sol3_dataflow_io/directives.tcl"
 set_directive_allocation -limit 1 -type operation "mix" mul
 set_directive_interface -mode ap_none -register "crec" dout_mix
@@ -17,4 +17,5 @@ set_directive_dataflow "crec"
 csynth_design
 #cosim_design
 #export_design -format sysgen
+export_design -flow impl -rtl verilog -format ip_catalog
 exit

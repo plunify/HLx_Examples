@@ -33,6 +33,7 @@ csynth_design
 #export_design -evaluate verilog -format ip_catalog
 #export_design -evaluate verilog -format sysgen
 #export_design -format sysgen
+export_design -flow impl -rtl verilog -format ip_catalog
 
 exit
 

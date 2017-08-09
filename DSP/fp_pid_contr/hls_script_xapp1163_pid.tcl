@@ -22,10 +22,11 @@ set_directive_interface -mode ap_ctrl_hs "PID_Controller"
 set_directive_interface -mode ap_none "PID_Controller" dout
 set_directive_interface -mode ap_none "PID_Controller" test_yi
 set_directive_interface -mode ap_none "PID_Controller" test_yd
-csim_design -clean
+#csim_design -clean
 csynth_design
-cosim_design
+#cosim_design
 #export_design -evaluate vhdl -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 close_project
 
 open_project hls_pid_prj
@@ -45,10 +46,11 @@ set_directive_interface -mode ap_ctrl_hs "PID_Controller"
 set_directive_interface -mode ap_none "PID_Controller" dout
 set_directive_interface -mode ap_none "PID_Controller" test_yi
 set_directive_interface -mode ap_none "PID_Controller" test_yd
-csim_design -clean
+#csim_design -clean
 csynth_design
-cosim_design
+#cosim_design
 #export_design -evaluate vhdl -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 close_project
 
 open_project hls_pid_prj
@@ -69,18 +71,11 @@ set_directive_interface -mode ap_ctrl_hs "PID_Controller"
 set_directive_interface -mode ap_none "PID_Controller" dout
 set_directive_interface -mode ap_none "PID_Controller" test_yi
 set_directive_interface -mode ap_none "PID_Controller" test_yd
-csim_design -clean
+#csim_design -clean
 csynth_design
-cosim_design
+#cosim_design
 #export_design -evaluate vhdl -format ip_catalog
+export_design -flow impl -rtl verilog -format ip_catalog
 close_project
 
-
-
-
-
-
-
-
-
-
+exit
