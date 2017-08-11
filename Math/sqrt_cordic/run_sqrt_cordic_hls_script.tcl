@@ -45,7 +45,7 @@ add_files cordic_isqrt.cpp  -cflags "-DSQRT_REF"
 add_files -tb test_main.cpp -cflags "-DSQRT_REF"
 open_solution "solution1"
 set_part {xc7z020clg484-1}
-create_clock -period 5 -name default
+create_clock -period 3.5 -name default
 #source "./hls_isqrt_prj/solution0/directives.tcl"
 set_directive_inline -off "func2_process_magnitude"
 set_directive_inline -off "func1_process_magnitude"
@@ -73,7 +73,7 @@ add_files cordic_isqrt.cpp  -cflags "-DSQRT_FLOAT"
 add_files -tb test_main.cpp -cflags "-DSQRT_FLOAT"
 open_solution "solution2"
 set_part {xc7z020clg484-1}
-create_clock -period 5 -name default
+create_clock -period 3.5 -name default
 #source "./hls_isqrt_prj/solution0/directives.tcl"
 set_directive_inline -off "func2_process_magnitude"
 set_directive_inline -off "func1_process_magnitude"
@@ -100,7 +100,7 @@ add_files cordic_isqrt.cpp  -cflags "-DSQRT_CORDIC"
 add_files -tb test_main.cpp -cflags "-DSQRT_CORDIC"
 open_solution "solution3"
 set_part {xc7z020clg484-1}
-create_clock -period 5 -name default
+create_clock -period 3 -name default
 #source "./hls_isqrt_prj/solution0/directives.tcl"
 set_directive_inline -off "func2_process_magnitude"
 set_directive_inline -off "func1_process_magnitude"
@@ -126,7 +126,7 @@ add_files cordic_isqrt.cpp  -cflags "-DSQRT_CORDIC -DSQRT_AP_INT"
 add_files -tb test_main.cpp -cflags "-DSQRT_CORDIC -DSQRT_AP_INT"
 open_solution "solution4"
 set_part {xc7z020clg484-1}
-create_clock -period 5 -name default
+create_clock -period 2.5 -name default
 #source "./hls_isqrt_prj/solution0/directives.tcl"
 set_directive_inline -off "func2_process_magnitude"
 set_directive_inline -off "func1_process_magnitude"

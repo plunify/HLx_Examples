@@ -49,7 +49,7 @@ export_design -flow impl -rtl verilog -format ip_catalog
 ################## SOLUTION3: DATAFLOW + CONFIG_DATAFLOW ####################
 open_solution "solution3"
 set_part {xc7z020clg484-1}
-create_clock -period 160MHz -name default
+create_clock -period 200MHz -name default
 config_dataflow -default_channel fifo -fifo_depth 2
 set_directive_dataflow "top_img_hist_equaliz1"
 #csim_design -ldflags {-Wl,--stack=268435456} -clean # ONLY FOR WINDOWS
@@ -63,7 +63,7 @@ export_design -flow impl -rtl verilog -format ip_catalog
 ################## SOLUTION4: as Solution3 + PIPELINE  all the innermost loops ####################
 open_solution "solution4"
 set_part {xc7z020clg484-1}
-create_clock -period 160MHz -name default
+create_clock -period 200MHz -name default
 config_dataflow -default_channel fifo -fifo_depth 2
 set_directive_dataflow "top_img_hist_equaliz1"
 set_directive_pipeline "compute_cdf/CDF_L2"
@@ -81,7 +81,7 @@ export_design -flow impl -rtl verilog -format ip_catalog
 ################## SOLUTION5: as Solution4 + DEPENDENCE FALSE  ####################
 open_solution "solution5"
 set_part {xc7z020clg484-1}
-create_clock -period 160MHz -name default
+create_clock -period 200MHz -name default
 config_dataflow -default_channel fifo -fifo_depth 2
 set_directive_dataflow "top_img_hist_equaliz1"
 set_directive_pipeline "compute_cdf/CDF_L2"

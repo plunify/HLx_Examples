@@ -21,7 +21,7 @@ add_files -tb src4/ap_bmp.cpp
 
 open_solution "solution1"
 set_part {xc7z020clg484-1}
-create_clock -period 160MHz -name default
+create_clock -period 250MHz -name default
 #csim_design -ldflags {-Wl,--stack=268435456} -clean 
 # ONLY FOR WINDOWS
 #csim_design -clean # ONLY FOR LINUX
@@ -35,7 +35,7 @@ export_design -flow impl -rtl verilog -format ip_catalog
 ################## SOLUTION2: DATAFLOW ####################
 open_solution "solution2"
 set_part {xc7z020clg484-1}
-create_clock -period 160MHz -name default
+create_clock -period 200MHz -name default
 set_directive_dependence -variable hist -type inter -dependent false "top_img_hist_equaliz1"
 #csim_design -ldflags {-Wl,--stack=268435456} -clean 
 # ONLY FOR WINDOWS

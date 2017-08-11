@@ -30,7 +30,7 @@ set Project     diff_sq_acc
 set Solution    Kintex_UltraScale
 set Device      "xcku035-fbva676-1-i"
 set Flow        ""
-set Clock       4.0
+set Clock       1.5
 set DefaultFlag 1
 
 #### main part
